@@ -1,0 +1,128 @@
+- TODOS los métodos y atributos ESTATICOS son accesibles de la siguiente manera:
+
+" NombreDeLaClase.nombreDelAtributo/NombreDelMétodo... ; "
+
+
+- TODOS los métodos y atributos NO ESTATICOS son accesibles de la siguiente manera:
+
+--------------------------------------------
+
+" NombreDeLaClase nombreDelObjeto = new  NombreDeLaClase(); ". 
+(Declaración e instanciamiento de un objeto de la clase: "NombreDeLaClase").
+
+" nombreDelObjeto.nombreDelAtributo/NombreDelMétodo... ;".
+(Uso del atributo/método de la clase "NombreDeLaClase" a través del objeto creado anteriormente).
+
+--------------------------------------------
+
+- La diferencia entre los atributos de clase (estáticos) y los atributos de instancia (no estáticos), está (a parte de la manera en que se les accede y declara/instancia) en que el valor asignado a un atributo de clase será tendrá una única ubicación en memoria, y cada vez que se lo quiera manipular (para modificar, mostrar, o lo que sea) el programa siempre lo irá a buscar a esa ubicación de memoria.
+En cambio, el valor contenido por un atributo de instancia dependerá completamente de a que instancia (objeto) pertenezca dicho atributo, y a cada instancia le corresponderá una ubicacion de memoria distinta. Por lo tanto, cada vez que se quiera manipular el valor de un atributo de instancia, el programa lo irá a buscar a la ubicación de memoria que corresponda con la instancia (el objeto) que haya llamado a dicho atributo.
+
+
+
+- La palabra reservada "this" sirve para acceder a/utilizar atributos o métodos de instancia, dentro de métodos no estáticos.
+Esta palabra reservada viene a hacer referencia a la instancia desde la que se llama a dicho método (un método de instancia siempre es llamado por un objeto).
+
+> Ejemplo:
+
+--------------------------------------------
+
+- Dentro del "main":
+{
+	NombreDeLaClase objeto = new  NombreDeLaClase();
+
+	nombreDelObjeto.MetodoNoEstatico();
+}
+
+
+- Dentro de "NombreDeLaClase" (la clase del objeto):
+{
+	public NombreDeLaClase int atributoNoEstatico = 10;
+
+	public MetodoNoEstatico()
+	{
+		Console.Write("El valor del atributo no estático es: {0}", this.atributoNoEstatico);
+	}
+}
+
+--------------------------------------------
+
+Por lo tanto, el "this" nunca se usará en métodos de clase (estáticos), ya que esos no tendrán relación con algún objeto (a diferencia de los atributos y métodos estáticos, los cuales sí pueden ser utilizados en cualquier parte).
+
+
+Sabiendo esto podemos decir que, por ejemplo, en una aplicación de gestión de empleados, la cantidad de empleados debería ser determinada por un "int" estático (ya que, a pesar de que pueda ser modificada, necesitamos que sea la misma para todo el programa), mientras que, por ejemplo, la edad de cada empleado debería ser determinada por un "int" no estático (ya que, en este caso, cada empleado sería un objeto distinto con una edad distinta).
+
+
+
+La diferencia entre las variables de tipo valor y las variables de tipo referencia está en que, el valor de una variable de tipo valor es directamente guardado en una posición de memoria en el "stack", mientras que el valor de una variable de tipo referencia es guardado en una posición de memoria en el "heap", a la cual se accede através de una referencia a dicha posición, la cual es guardada en una posicion de memoria en el "stack".
+
+Por lo tanto, si igualamos dos variables de tipo valor, lo que hacemos es simplemente igualar sus valores, mientras que al igualar dos variables de tipo referencia, lo que hacemos es igualar sus referencias. Esto último significa que, en lugar de suplantar el valor de la segunda variable de tipo referencia por el valor de la primera, lo que hacemos es que ahora ambas apunten a la misma posición de memoria (en donde se encuentra el verdadero valor de las variables, en el "heap").
+
+Si la referencia de una variable de tipo referencia se pierde (se borra del "stack", por ejemplo siendo igualada a otra como en ejemplo anterior), sus valores ubicados en la direccón de memoria del "heap", no serán accesibles nunca más y dicha direccón de memoria pronto pasará a ser liberada por el "Garbage Collector".
+
+
+El ":this" se usa para llamar la sobrecarga de un constructor de instancia, dentro de otra sobrecarga del constructor de instancia (con el proposito de ahorrarnos el escribir de más y repetir código).
+
+
+
+Al crear una nueva librería de clases, hay que compilarla.
+
+Para poder utilizar en otro proyecto las clases contenidas en una librería hay que...
+
+1- Agregar la librería como referencia al proyecto, así: "Proyecto > agregar... > referencias".
+
+2- Asegurarse de que el modificador de visibilidad establecido para la clase a la que queremos acceder sea "public" (las clases de un proyecto de tipo "Librería de Clases" siempre son generadas por defecto como privadas).
+
+
+Una vez agregada una libreria como referencia a un proyecto, se puede ver el contenido de sus clases así: "Proyecto > referencias > nombreDeLaLibreria > Ver en el examinador de objetos".
+
+
+Una vez agregada la referencia, es buena idea agregarle al pryecto tambien el "using" (escribir arriba del todo: "using NombreDeLaLibreria;", junto a todos lo "using" que vienen por defecto) con el "Namespace" de la librería (para no tener que estar accediendo a las clases con "NombreDeLaLibreria.NombreDeLaClase"...)
+
+
+Si no se agrega el "using", se puede, por ejemplo, crear un objeto de una clase que está dentro de una librería, así: 
+
+--------------------------------------------
+
+NombreDeLaLibreria.NombreDeLaClase nombreDelObjeto = new NombreDeLaClase();
+
+--------------------------------------------
+
+
+O, en caso de que la clase contenga algún constructor de instancia, así:
+
+
+--------------------------------------------
+
+NombreDeLaLibreria.NombreDeLaClase nombreDelObjeto = new NombreDeLaLibreria.NombreDeLaClase(parametroOpcional1, parametroOpcional2);
+
+--------------------------------------------
+
+
+Los "Namespaces" pueden anidarse (se puede hacer un "Namespace" dentro de otro "Namespace") con el proposito de ramificar y ordenar bien las clases por funcionalidad.
+
+
+"Cuanto más chico sea el universo en el que me estoy moviendo, más control voy a tener dentro de ese universo"
+
+	- Maximiliano Neiner | 4ta clase; 2da parte
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

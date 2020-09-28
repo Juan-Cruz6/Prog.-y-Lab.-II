@@ -1,0 +1,7 @@
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\bin\Debug\Ej.Clase1.exe.config
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\bin\Debug\Ej.Clase1.exe
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\bin\Debug\Ej.Clase1.pdb
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\obj\Debug\EjercicioClase01.csprojAssemblyReference.cache
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\obj\Debug\EjercicioClase01.csproj.CoreCompileInputs.cache
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\obj\Debug\Ej.Clase1.exe
+C:\Users\Juani\Desktop\UTN\Prog. y Lab. II\Soluciones y proyectos - Visual Studio\Muñoz.Juan\EjercicioClase01\obj\Debug\Ej.Clase1.pdb
